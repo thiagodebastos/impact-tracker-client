@@ -6,7 +6,6 @@ exports[`Avatar component renders correctly 1`] = `
                 flex items-center justify-center overflow-hidden bg-gray-500 rounded-full
                 h-16
                 w-16
-
                 
             "
 >

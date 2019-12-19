@@ -29,6 +29,7 @@ export function Avatar({ name, size = 'md', imgUrl, ...props }: Props) {
 
     function getInitialsFromName(name: string) {
         const fullName = name.split(' ');
+        if (fullName.length === 1) return [fullName[0][0]];
         return [fullName[0][0], fullName[fullName.length - 1][0]].join('');
     }
 
@@ -55,7 +56,6 @@ export function Avatar({ name, size = 'md', imgUrl, ...props }: Props) {
                 flex items-center justify-center overflow-hidden bg-gray-500 rounded-full
                 h-${sizeClassName[size]}
                 w-${sizeClassName[size]}
-
                 ${props.className || ''}
             `}
         >
