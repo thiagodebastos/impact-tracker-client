@@ -1,0 +1,27 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { select, boolean } from '@storybook/addon-knobs';
+import { Avatar } from './index.tsx';
+
+<Meta title="Avatar" />
+
+<Preview>
+    <Story name="Avatar sizes">
+        <div className="flex h-18">
+            <Avatar size="sm" name="Alan Watts" imgUrl="https://i.pravatar.cc/50?u=1@pravatar.com" />
+            <Avatar size="md" name="Thiago de Bastos" imgUrl="https://i.pravatar.cc/50?u=2@pravatar.com" />
+            <Avatar size="lg" name="Captain Planet" imgUrl="https://i.pravatar.cc/100?u=3@pravatar.com" />
+            <Avatar size="xl" name="Elissa Frances" imgUrl="https://i.pravatar.cc/100?u=4@pravatar.com"  />
+        </div>
+    </Story>
+    <Story name="Fallback avatars">
+        <div className="flex h-18">
+            <Avatar size="sm" name="Alan Watts" />
+            <Avatar size="md" name="Thiago de Bastos" />
+            <Avatar size="lg" name="Captain Planet" />
+            <Avatar size="xl"name="Elissa Frances"  />
+        </div>
+    </Story>
+</Preview>
+
+# Props
+<Props of={Avatar} />

@@ -1,0 +1,24 @@
+@tailwind base;
+
+@tailwind components;
+/**
+ * Below the component import is where you would add any of your custom
+ * component classes; stuff that you’d want loaded before the default utilities
+ * so the utilities could still override them.
+ *
+ * Here’s an example:
+ *
+ * .btn { ... } .form-input { ... }
+ */
+
+@tailwind utilities;
+/**
+ * Below the utilities import is where you would add any custom utilities you
+ * need that don’t come out of the box with Tailwind.
+ *
+ * Here is an example:
+ *
+ * .bg-pattern-graph-paper { ... }
+ *
+ * .skew-45 { ... }
+*/

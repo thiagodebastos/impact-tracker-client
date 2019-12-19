@@ -1,39 +1,71 @@
 {
-  "name": "client",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/jest": "^24.0.0",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-scripts": "3.3.0",
-    "typescript": "~3.7.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "client",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@testing-library/jest-dom": "^4.2.4",
+        "@testing-library/react": "^9.3.2",
+        "@testing-library/user-event": "^7.1.2",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "react-scripts": "3.3.0",
+        "tailwindcss": "^1.1.4",
+        "typescript": "~3.7.2"
+    },
+    "scripts": {
+        "start": "npm run build:style && react-scripts start",
+        "build:style": "tailwind build src/styles/index.css -o src/styles/tailwind.css",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "storybook": "start-storybook -p 9009 -s public",
+        "build-storybook": "build-storybook -s public"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "plugin:jsx-a11y/recommended"
+        ],
+        "plugins": [
+            "jsx-a11y"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@storybook/addon-actions": "^5.2.8",
+        "@storybook/addon-docs": "^5.2.8",
+        "@storybook/addon-info": "^5.2.8",
+        "@storybook/addon-knobs": "^5.2.8",
+        "@storybook/addon-links": "^5.2.8",
+        "@storybook/addon-storyshots": "^5.2.8",
+        "@storybook/addon-storyshots-puppeteer": "^5.2.8",
+        "@storybook/addons": "^5.2",
+        "@storybook/preset-create-react-app": "^1.5.0",
+        "@storybook/react": "^5.2",
+        "@types/jest": "^24.0.0",
+        "@types/node": "^12.0.0",
+        "@types/react": "^16.9.0",
+        "@types/react-dom": "^16.9.0",
+        "@types/react-test-renderer": "^16.9.1",
+        "@types/storybook__addon-info": "^5.2.1",
+        "@types/storybook__addon-storyshots": "^5.1.2",
+        "autoprefixer": "^9.7.3",
+        "babel-loader": "^8.0.6",
+        "babel-plugin-macros": "^2.8.0",
+        "postcss-loader": "^3.0.0",
+        "react-is": "^16.12.0",
+        "react-test-renderer": "^16.12.0",
+        "require-context.macro": "^1.2.2"
+    }
 }
