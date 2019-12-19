@@ -7,4 +7,4 @@ import '../src/styles/tailwind.css';
 addDecorator(withInfo);
 addDecorator(withKnobs);
 
-configure([requireContext('../src/components', true, /stories\.(tsx|mdx)/)], module);
+configure([requireContext('../src/components', true, /stories\.tsx$/)], module);
